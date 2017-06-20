@@ -10,7 +10,7 @@
 
 <%-- ${pageContext.request.contextPath} --%>
 
-<form action="${pageContext.request.contextPath}/upload/file" method="post" enctype="multipart/form-data">
+<form action="${pageContext.request.contextPath}/upload/file_springmvc" method="post" enctype="multipart/form-data">
         <div align="center">
         
             <fieldset style="width:80%">

@@ -56,9 +56,9 @@ public class UploadController {
 		
 		String upload_path = ResourceUtil.getUpload_path();
 		
-		if(null != first_f && first_f.getSize() >0 &&  UploadFile.upload(first_f, upload_path) && (second_f.getSize() == 0 ||second_f == null ) ){
+		if(null != first_f && first_f.getSize() >0 &&  UploadFile.upload(first_f, upload_path) && (second_f == null || second_f.getSize() == 0  ) ){
 			return "login";
-		}else if( second_f != null  &&  UploadFile.upload(second_f, upload_path) && (first_f.getSize() == 0 ||first_f == null )){
+		}else if( second_f != null  &&  UploadFile.upload(second_f, upload_path) && (first_f == null ||  first_f.getSize() == 0 )){
 			return "login";
 		}else if(null != first_f && first_f.getSize() >0 && second_f != null && second_f.getSize() >0 && UploadFile.upload(first_f, upload_path) && UploadFile.upload(second_f, upload_path)){
 			return "login";
